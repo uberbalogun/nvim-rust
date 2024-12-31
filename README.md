@@ -1,0 +1,82 @@
+# Neovim Configuration for Rust Development
+
+A customized Neovim configuration based on NvChad, optimized for Rust development. This configuration provides enhanced features for Rust programming, including inlay hints, integrated terminal management, and efficient window navigation.
+
+## Features
+
+- Rust-focused development environment
+- Inlay hints for better type information
+- Integrated terminal management
+- Based on NvChad for optimal performance
+- Modern and clean interface
+- Fast and lightweight
+
+## Prerequisites
+
+- Neovim (>= 0.9.0)
+- Git
+- Rust and cargo
+- rust-analyzer
+
+## Installation
+
+1. Backup your existing Neovim configuration:
+   ```bash
+   mv ~/.config/nvim ~/.config/nvim.backup
+   mv ~/.local/share/nvim ~/.local/share/nvim.backup
+   ```
+
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/nvim-rust.git ~/.config/nvim
+   ```
+
+3. Start Neovim:
+   ```bash
+   nvim
+   ```
+   The configuration will automatically install required plugins on first launch.
+
+## Custom Key Bindings
+
+### Terminal Operations
+- `<leader>i` - Open terminal in a new tab
+- `<Esc>` - Exit terminal mode (when in terminal)
+- `Ctrl+d` or type `exit` - Close terminal session
+
+### Window Navigation
+- `Ctrl+h` - Move to left window
+- `Ctrl+j` - Move to window below
+- `Ctrl+k` - Move to window above
+- `Ctrl+l` - Move to right window
+
+### Code Features
+- `<leader>y` - Toggle inlay hints
+
+Note: `<leader>` key is set to spacebar
+
+## Rust-Specific Features
+
+- Automatic rust-analyzer integration
+- Inlay hints for:
+  - Type hints
+  - Parameter hints
+  - Chaining hints
+- Integrated debugging support
+- Code completion
+- Go to definition
+- Find references
+- Hover documentation
+
+## Acknowledgments
+
+- Based on [NvChad](https://github.com/NvChad/NvChad)
+- Inspired by [LazyVim](https://github.com/LazyVim/starter)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

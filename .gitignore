@@ -1,0 +1,26 @@
+# Plugin directory
+/plugin/packer_compiled.lua
+
+# Compiled Lua sources
+luac.out
+
+# Lazy.nvim plugin directory
+/lazy/
+
+# Cache files
+.cache/
+lazy-lock.json
+
+# Log files
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Session files
+Session.vim
+
+# Persistent undo
+[._]*.un~
