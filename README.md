@@ -4,12 +4,12 @@ A customized Neovim configuration based on NvChad, optimized for Rust developmen
 
 ## Features
 
-- Rust-focused development environment
-- Inlay hints for better type information
-- Integrated terminal management
-- Based on NvChad for optimal performance
-- Modern and clean interface
-- Fast and lightweight
+- 🦀 Rust-focused development environment
+- 🔍 Inlay hints for better type information
+- 📟 Integrated terminal management
+- 🚀 Based on NvChad for optimal performance
+- 🎨 Modern and clean interface
+- ⚡ Fast and lightweight
 
 ## Prerequisites
 
@@ -36,6 +36,24 @@ A customized Neovim configuration based on NvChad, optimized for Rust developmen
    nvim
    ```
    The configuration will automatically install required plugins on first launch.
+
+## Required Mason Plugins
+
+After installation, you need to manually install the following plugins using Mason (`:Mason` command in Neovim):
+
+1. `codelldb` - Debugger for Rust
+2. `stylua` - Lua code formatter
+3. `rust-analyzer` - Rust language server
+4. `lua-language-server` - Lua language server
+
+To install these plugins:
+1. Open Neovim
+2. Type `:Mason`
+3. Press `i` on each of these plugins to install them
+4. Wait for the installation to complete
+5. Restart Neovim
+
+Note: Make sure all these plugins are installed before using the configuration for the best development experience.
 
 ## Custom Key Bindings
 
