@@ -68,6 +68,11 @@ Note: Make sure all these plugins are installed before using the configuration f
 - `Ctrl+k` - Move to window above
 - `Ctrl+l` - Move to right window
 
+### Tab Navigation
+- `gt` - Go to next tab
+- `gT` - Go to previous tab
+- `<number>gt` - Go to tab number <number> (e.g., `2gt` goes to second tab)
+
 ### Code Features
 - `<leader>y` - Toggle inlay hints
 
