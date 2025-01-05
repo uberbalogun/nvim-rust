@@ -67,16 +67,27 @@ This configuration includes Cascade AI integration through Codeium. To use it:
    Follow the instructions to authenticate with your Codeium account.
 
 2. Features:
-   - AI-powered code completion
-   - Context-aware suggestions
+   - AI-powered code completion with contextual understanding
+   - Ergonomic, non-intrusive suggestions that appear as you type
    - Seamless integration with nvim-cmp
-   - Works with Rust and all other supported languages
+   - Specialized Rust support:
+     - Smart type annotations and inference
+     - Intelligent match pattern suggestions
+     - Error handling with Result/Option types
+     - Standard library function completions
+     - Struct and trait implementation suggestions
 
 3. Key bindings:
-   - Use regular completion triggers (`Ctrl+Space` or just type)
-   - Accept suggestions with `Tab` or `Ctrl+y`
-   - Navigate suggestions with `Ctrl+n` and `Ctrl+p`
-   - Dismiss suggestions with `Ctrl+e`
+   - Suggestions appear automatically as you type
+   - `Tab` or `Ctrl+y` - Accept suggestion
+   - `Ctrl+n` and `Ctrl+p` - Navigate through suggestions
+   - `Ctrl+e` - Dismiss suggestions
+
+4. Benefits:
+   - Works like a pair programmer, offering contextual completions
+   - Maintains your coding flow without interruptions
+   - Full control over suggestions - accept, modify, or reject
+   - Integrates naturally with Neovim's completion workflow
 
 ## Custom Key Bindings
 
