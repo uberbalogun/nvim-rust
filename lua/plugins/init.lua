@@ -181,16 +181,7 @@ return {
       "hrsh7th/nvim-cmp",
     },
     config = function()
-      require("codeium").setup({
-        tools = {
-          -- Enable Codeium language server
-          language_server = true,
-          -- Disable suggestions panel (we'll use nvim-cmp instead)
-          suggestions = false,
-          -- Enable debugging
-          debug = false,
-        },
-      })
+      require("codeium").setup({})
     end
   },
   {
