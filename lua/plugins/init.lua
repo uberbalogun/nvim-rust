@@ -172,4 +172,35 @@ return {
       })
     end
   },
+
+  {
+    "Exafunction/codeium.nvim",
+    event = "BufEnter",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({
+        tools = {
+          -- Enable Codeium language server
+          language_server = true,
+          -- Disable suggestions panel (we'll use nvim-cmp instead)
+          suggestions = false,
+          -- Enable debugging
+          debug = false,
+        },
+      })
+    end
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+        { name = "codeium", priority = 1000 },
+      }))
+      return opts
+    end,
+  },
 }

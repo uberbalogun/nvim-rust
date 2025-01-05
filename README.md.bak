@@ -10,7 +10,6 @@ A customized Neovim configuration based on NvChad, optimized for Rust developmen
 - Based on NvChad for optimal performance
 - Modern and clean interface
 - Fast and lightweight
-- Integrated with Cascade AI through Codeium
 
 ## Prerequisites
 
@@ -38,46 +37,6 @@ A customized Neovim configuration based on NvChad, optimized for Rust developmen
    ```
    The configuration will automatically install required plugins on first launch.
 
-## Required Mason Plugins
-
-After installation, you need to manually install the following plugins using Mason (`:Mason` command in Neovim):
-
-1. `codelldb` - Debugger for Rust
-2. `stylua` - Lua code formatter
-3. `rust-analyzer` - Rust language server
-4. `lua-language-server` - Lua language server
-
-To install these plugins:
-1. Open Neovim
-2. Type `:Mason`
-3. Press `i` on each of these plugins to install them
-4. Wait for the installation to complete
-5. Restart Neovim
-
-Note: Make sure all these plugins are installed before using the configuration for the best development experience.
-
-## Cascade AI Integration
-
-This configuration includes Cascade AI integration through Codeium. To use it:
-
-1. First-time setup:
-   ```
-   :Codeium Auth
-   ```
-   Follow the instructions to authenticate with your Codeium account.
-
-2. Features:
-   - AI-powered code completion
-   - Context-aware suggestions
-   - Seamless integration with nvim-cmp
-   - Works with Rust and all other supported languages
-
-3. Key bindings:
-   - Use regular completion triggers (`Ctrl+Space` or just type)
-   - Accept suggestions with `Tab` or `Ctrl+y`
-   - Navigate suggestions with `Ctrl+n` and `Ctrl+p`
-   - Dismiss suggestions with `Ctrl+e`
-
 ## Custom Key Bindings
 
 ### Terminal Operations
@@ -90,11 +49,6 @@ This configuration includes Cascade AI integration through Codeium. To use it:
 - `Ctrl+j` - Move to window below
 - `Ctrl+k` - Move to window above
 - `Ctrl+l` - Move to right window
-
-### Tab Navigation
-- `gt` - Go to next tab
-- `gT` - Go to previous tab
-- `<number>gt` - Go to tab number <number> (e.g., `2gt` goes to second tab)
 
 ### Code Features
 - `<leader>y` - Toggle inlay hints
