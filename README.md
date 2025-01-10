@@ -107,6 +107,15 @@ This configuration includes Cascade AI integration through Codeium. To use it:
 - `gT` - Go to previous tab
 - `<number>gt` - Go to tab number <number> (e.g., `2gt` goes to second tab)
 
+### Code Folding with nvim-ufo
+- `<space>ft` - Toggle code folding
+- Automatic fold detection using treesitter
+- Smart fold level management:
+  - Initial fold level set to show all code
+  - Visual fold column indicator
+  - Folds preserve syntax highlighting
+  - Supports both treesitter and indent-based folding
+
 ### Code Features
 - `<leader>y` - Toggle inlay hints
 
