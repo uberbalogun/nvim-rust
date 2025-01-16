@@ -1,7 +1,5 @@
 local plugins = {
-  {
-    import = "custom.plugins.ufo",
-  },
+  -- add your plugins here
 }
 
 return plugins

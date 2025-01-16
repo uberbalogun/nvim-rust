@@ -194,7 +194,4 @@ return {
       return opts
     end,
   },
-  {
-    import = "plugins.ufo"
-  },
 }
