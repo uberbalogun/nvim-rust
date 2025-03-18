@@ -1,3 +1,4 @@
+vim.notify("Plugin file loaded: " .. os.date(), vim.log.levels.INFO)
 return {
   {
     "williamboman/mason.nvim",
