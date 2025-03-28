@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 local lazy_config = require "configs.lazy"
 
 -- load plugins
+
 require("lazy").setup({
   {
     "NvChad/NvChad",
@@ -21,9 +22,13 @@ require("lazy").setup({
     branch = "v2.5",
     import = "nvchad.plugins",
   },
-
   { import = "plugins" },
-}, lazy_config)
+}, vim.tbl_extend("force", lazy_config, {
+  change_detection = {
+    enabled = false, -- Disable automatic reloading on file changes
+    notify = false,  -- Suppress notifications about changes
+  },
+}))
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
