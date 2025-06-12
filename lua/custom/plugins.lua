@@ -61,27 +61,8 @@ local plugins = {
       end
     },
 {
-  "Exafunction/codeium.nvim",
-  event = { "InsertEnter", "BufEnter" }, -- Trigger on insert and buffer entry
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
-  },
-  config = function()
-    require("codeium").setup({
-      enable_cmp_source = true, -- Enable nvim-cmp integration
-      virtual_text = {
-        enabled = true, -- Enable virtual text suggestions
-        manual = false, -- Show suggestions automatically
-        default_filetype_enabled = true, -- Enable for all filetypes
-        idle_delay = 500, -- Delay for suggestions (ms)
-      },
-      workspace_root = {
-        use_lsp = true, -- Use LSP for workspace context
-        paths = { ".git", ".hg", ".svn", "package.json", "Cargo.toml" }, -- Include Rust projects
-      },
-    })
-  end,
+  'luozhiya/fittencode.nvim',
+  opts = {},
 },
 {
   "hrsh7th/nvim-cmp",
