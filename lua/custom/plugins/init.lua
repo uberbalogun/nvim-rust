@@ -1,5 +1,1 @@
-local plugins = {
-  -- add your plugins here
-}
-
-return plugins
+return require("custom.plugins")
