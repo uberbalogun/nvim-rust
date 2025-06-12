@@ -60,28 +60,43 @@ local plugins = {
         })
       end
     },
-    {
-      "Exafunction/codeium.nvim",
-      event = "BufEnter",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "hrsh7th/nvim-cmp",
+{
+  "Exafunction/codeium.nvim",
+  event = { "InsertEnter", "BufEnter" }, -- Trigger on insert and buffer entry
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "hrsh7th/nvim-cmp",
+  },
+  config = function()
+    require("codeium").setup({
+      enable_cmp_source = true, -- Enable nvim-cmp integration
+      virtual_text = {
+        enabled = true, -- Enable virtual text suggestions
+        manual = false, -- Show suggestions automatically
+        default_filetype_enabled = true, -- Enable for all filetypes
+        idle_delay = 500, -- Delay for suggestions (ms)
       },
-      config = function()
-        require("codeium").setup({})
-      end
-    },
-    {
-      "hrsh7th/nvim-cmp",
-      opts = function(_, opts)
-        local cmp = require("cmp")
-        opts.sources = opts.sources or {}
-        opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
-          { name = "codeium", priority = 1000 },
-        }))
-        return opts
-      end,
-    },
+      workspace_root = {
+        use_lsp = true, -- Use LSP for workspace context
+        paths = { ".git", ".hg", ".svn", "package.json", "Cargo.toml" }, -- Include Rust projects
+      },
+    })
+  end,
+},
+{
+  "hrsh7th/nvim-cmp",
+  opts = function(_, opts)
+    local cmp = require("cmp")
+    opts.sources = opts.sources or {}
+    opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+      { name = "codeium", priority = 1000 },
+      { name = "nvim_lsp" },
+      { name = "buffer" },
+      { name = "path" },
+    }))
+    return opts
+  end,
+},
     {
       'saecki/crates.nvim',
       ft = {"toml"},
